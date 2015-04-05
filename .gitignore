@@ -1,0 +1,23 @@
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# User
+*.suo
+*.user
+*.sln.docstates
+[Pp]ackages/
+.sass-cache/
+AppSettings.config
+ConnectionStrings.config
+Elmah.config
+
+# Binaries
+[Bb]in/
+[Oo]bj/
+
+# Node
+node_modules/
+bower_components/

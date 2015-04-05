@@ -1,0 +1,3 @@
+zombie.controller('DefaultCtrl', [function () {
+
+}]);

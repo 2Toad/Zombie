@@ -1,0 +1,62 @@
+body {
+    background: #eeeeee;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+// Prevent Angular flash
+// This little trick is necessary instead of using the ng-cloak directive
+// in Index.cshtml because we load our scripts at the bottom of the page
+.ng-cloak {
+    display: none;
+}
+
+div.noscript, // We can't style the <noscript> element because IE ignores it
+div.unsupported-browser {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    min-height: 65px;
+    font: 95%/30px Verdana;
+    text-align: center;
+    background: #f2dede;
+    border-bottom: solid 1px #a94442;
+}
+
+section.view {
+    background-color: #ffffff;
+}
+
+header.title {
+    padding: 50px 0 70px;
+    background-color: #eeeeee;
+    text-align: center;
+
+    h1 {
+        font-size: 3em;
+        font-weight: bold;
+    }
+}
+
+section.content {
+    min-height: 250px;
+    padding: 15px 0;
+}
+
+.subnav {
+    .nav-pills > .active > a, .nav-pills > .active > a:hover {
+        background-color: #d9edf7;
+        border: solid 1px #428bca;
+        color: #428bca;
+    }
+}
+
+.quote {
+    font-style: italic;
+    text-align: left;
+
+    span {
+        font-style: normal;
+        white-space: nowrap;
+    }
+}

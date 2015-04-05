@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="zombieApp" ng-strict-di>
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title ng-bind="'Zombie' + (title ? ' &raquo; ' + title : '')">Zombie</title>
+    @Styles.Render("~/bundles/css")
+</head>
+<body>
+    <noscript>
+        <div class="noscript">
+            <h3>JavaScript is disabled in your browser</h3>
+            <p>This web application requires JavaScript to function properly</p>
+        </div>
+    </noscript>
+    <!--[if lt IE 9]>
+        <div class="unsupported-browser">
+            <h3>Your browser is not supported</h3>
+            <p>This web application requires a <a href="http://www.google.com/chrome/browser/" target="_blank">modern browser</a> to function properly</p>
+        </div>
+    <![endif]-->
+
+    @RenderBody()
+    @Scripts.Render("~/bundles/js")
+</body>
+</html>

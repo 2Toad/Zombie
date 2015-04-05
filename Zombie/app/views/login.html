@@ -1,0 +1,41 @@
+<section ng-controller="LoginCtrl" class="container content">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h1>Login{{loginRequired() ? " Required" : ""}}</h1>
+            <h4 ng-show="barricade.expired">Your login has expired.</h4>
+            <form name="form" ng-submit="login()" autocomplete="off" novalidate>
+                <div class="form-group well">
+                    <div class="form-group" ng-class="form.username.$dirty && {'has-error': form.username.$invalid, 'has-success': form.username.$valid}">
+                        <label for="username" class="control-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input type="text" name="username" class="form-control" ng-model="username" required>
+                        </div>
+                        <span class="help-block" ng-show="form.username.$dirty && form.username.$invalid">Please enter your username.</span>
+                    </div>
+                    <div class="form-group has-feedback" ng-class="form.password.$dirty && {'has-error': form.password.$invalid, 'has-success': form.password.$valid}">
+                        <label for="password" class="control-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            <input type="password" name="password" class="form-control" ng-model="password" required>
+                        </div>
+                        <span class="help-block" ng-show="form.password.$dirty && form.password.$invalid">Please enter your password.</span>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="config.preferences.rememberMe">
+                            Remember Me
+                        </label>
+                    </div>
+                </div>
+                <zb-form-error></zb-form-error>
+                <button type="submit" class="btn btn-primary" zb-ladda="login">Login</button>
+                <button type="button" class="btn btn-warning" ng-click='cancel()'>Cancel</button>
+                <div class="btn-group pull-right">
+                    <a href="/register" class="btn">Register</a>
+                    <a href="/loginhelp" class="btn">Help</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

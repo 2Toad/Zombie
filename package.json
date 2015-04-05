@@ -1,0 +1,11 @@
+{
+  "name": "zombie",
+  "private": "true",
+  "devDependencies": {
+    "gulp": "3.8.x",
+    "gulp-plumber": "1.0.x",
+    "gulp-bower": "0.0.x",
+    "gulp-sass": "1.3.x",
+    "browser-sync": "2.4.x"
+  }
+}

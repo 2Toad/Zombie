@@ -1,0 +1,10 @@
+﻿<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ExcludeFromPackageFolders Include="app\sass">
+      <FromTarget>Zombie.wpp.targets</FromTarget>
+    </ExcludeFromPackageFolders>
+    <ExcludeFromPackageFiles Include="packages.config">
+      <FromTarget>Zombie.wpp.targets</FromTarget>
+    </ExcludeFromPackageFiles>
+  </ItemGroup>
+</Project>

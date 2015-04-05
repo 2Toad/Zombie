@@ -1,0 +1,14 @@
+<div class="panel panel-danger" ng-show="form.validationSummary">
+    <div class="panel-heading">
+        <button type="button" class="close" ng-click="form.closeValidationSummary()">&times;</button>
+        <h3 class="panel-title"><i class="fa fa-exclamation-circle"></i> Validation Errors</h3>
+    </div>
+    <div class="panel-body">
+        {{form.validationSummary.message}}
+        <ul ng-show="form.validationSummary.list">
+            <li ng-repeat="error in form.validationSummary.list">
+                {{error}}
+            </li>
+        </ul>
+    </div>
+</div>

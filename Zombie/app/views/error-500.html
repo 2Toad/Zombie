@@ -1,0 +1,9 @@
+<section ng-controller="Error500Ctrl" class="container content">
+    <h1>Oops!</h1>
+    <p>Well this is embarrasing. It appears our application has crashed.</p>
+    <br />
+    <p>The issue was logged at <strong>{{time}}</strong>, whereupon our engineers were rallied to fix it.</p>
+    <p>Please feel free to check on their efforts by try, try, trying again.</p>
+
+    <button type="button" class="btn btn-primary" zb-ladda="retry" ng-click="home()">Try Again</button>
+</section>
