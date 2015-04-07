@@ -288,13 +288,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ConnectionStrings.config" />
+    <None Include="ConnectionStrings.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppSettings.config" />
+    <None Include="AppSettings.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Security.es.resx">
@@ -331,7 +331,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Elmah.config" />
+    <None Include="Elmah.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\sass\vendor.scss" />
