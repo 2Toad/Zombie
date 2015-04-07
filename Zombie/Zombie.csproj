@@ -151,6 +151,7 @@
     <Content Include="app\js\vendor\angular-cookies.js" />
     <Content Include="app\js\vendor\angular-errorz.js" />
     <Content Include="app\js\vendor\angular-local-storage.js" />
+    <Content Include="app\js\vendor\angular-localizer.js" />
     <Content Include="app\js\vendor\angular-route.js" />
     <Content Include="app\js\vendor\angular-sanitize.js" />
     <Content Include="app\js\vendor\angular.js" />
@@ -247,12 +248,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\css\app.css" />
-    <Content Include="app\css\fonts\fontawesome-webfont.eot" />
-    <Content Include="app\css\fonts\fontawesome-webfont.svg" />
-    <Content Include="app\css\fonts\fontawesome-webfont.ttf" />
-    <Content Include="app\css\fonts\fontawesome-webfont.woff" />
-    <Content Include="app\css\fonts\fontawesome-webfont.woff2" />
-    <Content Include="app\css\fonts\FontAwesome.otf" />
     <Content Include="app\css\vendor\bootstrap.css" />
     <Content Include="app\css\vendor\font-awesome.css" />
     <Content Include="app\css\vendor\toastr.css" />
@@ -291,7 +286,7 @@
     <None Include="ConnectionStrings.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AppSettings.config" />
@@ -352,7 +347,7 @@
     <None Include="Web.Staging.config" />
     <None Include="Web.Test.config" />
     <None Include="Web.CI.config" />
-    <Content Include="Zombie.wpp.targets" />
+    <None Include="Zombie.wpp.targets" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

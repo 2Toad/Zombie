@@ -1,10 +1,19 @@
 ﻿<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <!-- 
+      Sass has already been compiled into CSS
+    -->
     <ExcludeFromPackageFolders Include="app\sass">
       <FromTarget>Zombie.wpp.targets</FromTarget>
     </ExcludeFromPackageFolders>
-    <ExcludeFromPackageFiles Include="packages.config">
-      <FromTarget>Zombie.wpp.targets</FromTarget>
-    </ExcludeFromPackageFiles>
+
+    <!-- 
+      Include all vendor files
+      Some files, like fonts and Angular i18n files, don't need to be in the solution
+      Files that aren't in the solution, aren't deployed...
+    -->
+    <FilesForPackagingFromProject Include="app\js\vendor\**\*;app\css\vendor\**\*;app\css\fonts\*">
+      <DestinationRelativePath>%(RelativeDir)%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+    </FilesForPackagingFromProject>
   </ItemGroup>
 </Project>
