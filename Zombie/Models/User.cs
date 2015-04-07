@@ -48,7 +48,7 @@ namespace Zombie.Models
                     PasswordSalt = "C38EBE370583415BAE8270546D8AFB65",
                     FirstName = "User", 
                     LastName = "One",
-                    LanguageId = context.Languages.Single(x => x.Locale == "es-MX").Id,
+                    LanguageId = context.Languages.Single(x => x.Locale == "es").Id,
                     Claims = new List<Claim> {context.Claims.Single(x => x.Type == "Role" && x.Value == "User")}
                 }
             };

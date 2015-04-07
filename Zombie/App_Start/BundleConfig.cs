@@ -46,6 +46,7 @@ namespace Zombie
                     "~/app/js/vendor/angular-sanitize.js",
 
                     // Angular-dependent
+                    "~/app/js/vendor/angular-localizer.js",
                     "~/app/js/vendor/angular-errorz.js",
                     "~/app/js/vendor/barricade-angular.js",
                     "~/app/js/vendor/ui-bootstrap.js",

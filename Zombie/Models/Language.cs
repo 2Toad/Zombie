@@ -18,7 +18,7 @@ namespace Zombie.Models
         {
             var languages = new[] {
                 new Language {Locale = "en-US", Description = "English (United States)"},
-                new Language {Locale = "es-MX", Description = "Spanish (Mexico)"}
+                new Language {Locale = "es", Description = "Spanish"}
             };
 
             context.Languages.AddOrUpdate(u => new { u.Locale }, languages);

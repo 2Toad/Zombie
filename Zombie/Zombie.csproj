@@ -143,6 +143,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\i18n\general.es.js" />
+    <Content Include="app\js\directives\zbAngularLocale.js" />
     <Content Include="app\js\controllers\login.js" />
     <Content Include="app\js\controllers\login-dialog.js" />
     <Content Include="app\js\controllers\header.js" />
@@ -181,8 +183,8 @@
     <Compile Include="Models\DbModel.cs" />
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Resources\Security.es-MX.Designer.cs">
-      <DependentUpon>Security.es-MX.resx</DependentUpon>
+    <Compile Include="Resources\Security.es.Designer.cs">
+      <DependentUpon>Security.es.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -191,18 +193,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Resources\Activation.es-MX.Designer.cs">
-      <DependentUpon>Activation.es-MX.resx</DependentUpon>
+    <Compile Include="Resources\Activation.es.Designer.cs">
+      <DependentUpon>Activation.es.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Resources\General.es-MX.Designer.cs">
-      <DependentUpon>General.es-MX.resx</DependentUpon>
+    <Compile Include="Resources\General.es.Designer.cs">
+      <DependentUpon>General.es.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Resources\Registration.es-MX.Designer.cs">
-      <DependentUpon>Registration.es-MX.resx</DependentUpon>
+    <Compile Include="Resources\Registration.es.Designer.cs">
+      <DependentUpon>Registration.es.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -295,25 +297,25 @@
     <Content Include="AppSettings.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Security.es-MX.resx">
+    <EmbeddedResource Include="Resources\Security.es.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Security.es-MX.Designer.cs</LastGenOutput>
+      <LastGenOutput>Security.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Security.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Security.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Activation.es-MX.resx">
+    <EmbeddedResource Include="Resources\Activation.es.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Activation.es-MX.Designer.cs</LastGenOutput>
+      <LastGenOutput>Activation.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\General.es-MX.resx">
+    <EmbeddedResource Include="Resources\General.es.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>General.es-MX.Designer.cs</LastGenOutput>
+      <LastGenOutput>General.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Registration.es-MX.resx">
+    <EmbeddedResource Include="Resources\Registration.es.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Registration.es-MX.Designer.cs</LastGenOutput>
+      <LastGenOutput>Registration.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Activation.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -341,6 +343,7 @@
     <Content Include="app\sass\header.scss" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\i18n\general.en-US.js" />
     <None Include="Properties\PublishProfiles\CI.pubxml" />
     <None Include="Properties\PublishProfiles\Production.pubxml" />
     <None Include="Properties\PublishProfiles\Staging.pubxml" />

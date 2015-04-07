@@ -1,4 +1,4 @@
-window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize', 'ttErrorz', 'barricade', 'ui.bootstrap', 'xtForm', 'LocalStorageModule'])
+window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize', 'ttLocalizer', 'ttErrorz', 'barricade', 'ui.bootstrap', 'xtForm', 'LocalStorageModule'])
 
 .config(['$routeProvider', '$locationProvider', 'xtFormConfigProvider',
     function ($routeProvider, $locationProvider, xtFormConfigProvider) {
@@ -42,16 +42,32 @@ window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize
     }
 ])
 
-.run(['$rootScope', 'errorz', 'config', 'barricade',
-    function ($rootScope, errorz, config, barricade) {
+.run(['$rootScope', 'localizer', 'errorz', 'config', 'barricade',
+    function ($rootScope, localizer, errorz, config, barricade) {
+        config.init({
+            profile: {
+                locale: 'en-US'
+            }
+        });
 
-        var serverErrorHandler = function () { toastr.error('Please try again.', 'Server Error'); };
+        localizer.init({
+            translationsUrl: '/app/i18n/',
+            defaultLocale: config.profile.locale,
+            errorHandler: function (msg) {
+                toastr.error('Unable to load localization file: ' + msg, 'Fatal Error');
+            }
+        });
+
+        var serverErrorHandler = function () {
+            localizer.translateAll('general', ['serverErrorMessage', 'serverErrorTitle'], function (t) {
+                toastr.error(t.serverErrorMessage, t.serverErrorTitle);
+            }).catch(_.partial(toastr.error, 'Please try again.', 'Server Error'));
+        }
+
         errorz.init({
             0: serverErrorHandler,
             500: serverErrorHandler
         });
-
-        config.init();
 
         barricade.init(config.preferences.rememberMe, {
             tokenRequestUrl: '/api/oauth/token',
@@ -60,7 +76,7 @@ window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize
             serverErrorTemplateUrl: '/app/views/error-500.html',
             exclusions: ['/app/views/form-error.html'],
             serverError: function (rejection) {
-                if (rejection.status === 403) toastr.warning('You don\'t have permission to perform the requested action.');
+                rejection.status === 403 && toastr.warning('You don\'t have permission to perform the requested action.');
                 return rejection;
             }
         });
