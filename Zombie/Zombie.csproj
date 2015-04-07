@@ -326,9 +326,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Elmah.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="app\sass\vendor.scss" />
   </ItemGroup>
   <ItemGroup>

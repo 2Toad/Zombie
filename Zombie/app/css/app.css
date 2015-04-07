@@ -388,14 +388,6 @@ div.noscript, div.unsupported-browser {
 section.view {
   background-color: #ffffff; }
 
-header.title {
-  padding: 50px 0 70px;
-  background-color: #eeeeee;
-  text-align: center; }
-  header.title h1 {
-    font-size: 3em;
-    font-weight: bold; }
-
 section.content {
   min-height: 250px;
   padding: 15px 0; }
@@ -405,14 +397,7 @@ section.content {
   border: solid 1px #428bca;
   color: #428bca; }
 
-.quote {
-  font-style: italic;
-  text-align: left; }
-  .quote span {
-    font-style: normal;
-    white-space: nowrap; }
-
-header .navbar {
+header nav.navbar {
   margin-bottom: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;

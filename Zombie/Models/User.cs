@@ -34,8 +34,8 @@ namespace Zombie.Models
                 new User {
                     Username = "Admin1",
                     Email = Config.TestEmail("admin1"),
-                    PasswordHash = SecurityContext.GeneratePasswordHash("Pass123!", "84081AE82028478CA3831CEDB7430801"),
-                    PasswordSalt = "84081AE82028478CA3831CEDB7430801",
+                    PasswordHash = SecurityContext.GeneratePasswordHash("Pass123!", "b331P8^Gf5BNfq!lLcS$!7b@144N9XR6"),
+                    PasswordSalt = "b331P8^Gf5BNfq!lLcS$!7b@144N9XR6",
                     FirstName = "Admin", 
                     LastName = "One",
                     LanguageId = context.Languages.Single(x => x.Locale == "en-US").Id,
@@ -44,8 +44,8 @@ namespace Zombie.Models
                 new User {
                     Username = "User1",
                     Email = Config.TestEmail("user1"),
-                    PasswordHash = SecurityContext.GeneratePasswordHash("Pass123!", "C38EBE370583415BAE8270546D8AFB65"),
-                    PasswordSalt = "C38EBE370583415BAE8270546D8AFB65",
+                    PasswordHash = SecurityContext.GeneratePasswordHash("Pass123!", "aK2Ik5Y@LLcTo8PGf29Zx#!*!S99416s"),
+                    PasswordSalt = "aK2Ik5Y@LLcTo8PGf29Zx#!*!S99416s",
                     FirstName = "User", 
                     LastName = "One",
                     LanguageId = context.Languages.Single(x => x.Locale == "es").Id,
