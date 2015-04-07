@@ -49,6 +49,11 @@ gulp.task('bower-copy', ['bower-update'], function () {
         .pipe(gulp.dest('Zombie/app/css/fonts'));
 });
 
+gulp.task('devbox-config', function () {
+    gulp.src('devbox_templates/*.config')
+        .pipe(gulp.dest('Zombie'));
+});
+
 gulp.task('sass', function () {
     gulp.src('Zombie/app/sass/app.scss')
         .pipe(plumber())
@@ -74,4 +79,5 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('bower', ['bower-update', 'bower-copy']);
+gulp.task('devbox', ['bower', 'devbox-config']);
 gulp.task('default', ['browser-sync', 'watch']);

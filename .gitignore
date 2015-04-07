@@ -8,16 +8,14 @@ $RECYCLE.BIN/
 *.suo
 *.user
 *.sln.docstates
-[Pp]ackages/
-.sass-cache/
-AppSettings.config
-ConnectionStrings.config
-Elmah.config
+Zombie/AppSettings.config
+Zombie/ConnectionStrings.config
 
 # Binaries
 [Bb]in/
 [Oo]bj/
 
-# Node
+# Package Management
 node_modules/
 bower_components/
+[Pp]ackages/
