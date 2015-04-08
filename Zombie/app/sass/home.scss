@@ -1,5 +1,7 @@
 .home {
     .jumbotron {
+        margin-bottom: 0;
+
         i {
             color: #eb7260;
         }
@@ -11,7 +13,7 @@
 
         .tile {
             background-color: #eeeeee;
-            border-radius: 6px;
+            @include border-radius(6px);
             padding: 14px;
             position: relative;
             text-align: center;
@@ -50,12 +52,12 @@
                 display: inline-block;
                 width: 100px;
 
-                span.fa-stack{
+                span.fa-stack {
                     position: static;
                     display: block;
                 }
             }
-            
+
             .caption {
                 margin-top: -.17em;
                 color: #34495e;

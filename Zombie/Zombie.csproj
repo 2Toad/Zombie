@@ -283,6 +283,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\sass\mixins.scss" />
     <None Include="ConnectionStrings.config" />
   </ItemGroup>
   <ItemGroup>
@@ -324,9 +325,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>General.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="app\sass\vendor.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\sass\footer.scss" />

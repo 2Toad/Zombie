@@ -325,14 +325,44 @@
 .ladda-button[data-style=contract-overlay][data-loading] .ladda-spinner {
   opacity: 1; }
 
-/**************************
-    Bootstrap 
-***************************/
-.jumbotron {
-  margin-bottom: 0; }
+body {
+  background: #eeeeee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+.ng-cloak {
+  display: none; }
+
+div.noscript, div.unsupported-browser {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  min-height: 65px;
+  font: 95%/30px Verdana;
+  text-align: center;
+  background: #f2dede;
+  border-bottom: solid 1px #a94442; }
+
+section.view {
+  background-color: #ffffff; }
+
+section.content {
+  min-height: 250px;
+  padding: 15px 0; }
+
+.subnav .nav-pills > .active > a, .subnav .nav-pills > .active > a:hover {
+  background-color: #d9edf7;
+  border: solid 1px #428bca;
+  color: #428bca; }
+
+/**************************
+ Bootstrap 
+***************************/
 /* Modal */
 .modal-content {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
   border-radius: 0; }
 
 .modal-dialog {
@@ -367,52 +397,28 @@
   background-color: #f2dede;
   color: #a94442; }
 
-body {
-  background: #eeeeee;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-.ng-cloak {
-  display: none; }
-
-div.noscript, div.unsupported-browser {
-  position: fixed;
-  top: 0;
-  z-index: 9999;
-  width: 100%;
-  min-height: 65px;
-  font: 95%/30px Verdana;
-  text-align: center;
-  background: #f2dede;
-  border-bottom: solid 1px #a94442; }
-
-section.view {
-  background-color: #ffffff; }
-
-section.content {
-  min-height: 250px;
-  padding: 15px 0; }
-
-.subnav .nav-pills > .active > a, .subnav .nav-pills > .active > a:hover {
-  background-color: #d9edf7;
-  border: solid 1px #428bca;
-  color: #428bca; }
-
 header nav.navbar {
   margin-bottom: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+  -ms-border-radius: 0;
   border-radius: 0; }
 
 footer {
   padding-top: 25px; }
 
-.home .jumbotron i {
-  color: #eb7260; }
+.home .jumbotron {
+  margin-bottom: 0; }
+  .home .jumbotron i {
+    color: #eb7260; }
 .home .tiles {
   padding: 30px 0;
   background-color: #ffffff; }
   .home .tiles .tile {
     background-color: #eeeeee;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
     border-radius: 6px;
     padding: 14px;
     position: relative;
