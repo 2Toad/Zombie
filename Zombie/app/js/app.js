@@ -73,7 +73,7 @@ window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize
             exclusions: ['/app/views/form-error.html'],
             serverError: function (rejection) {
                 rejection.status === 403 && localizer.translateAll('general', [
-                     'unauthorizedAccessMessage', 'unauthorizedAccessTitle'
+                    'unauthorizedAccessMessage', 'unauthorizedAccessTitle'
                 ], function (t) {
                     toastr.warning(t.unauthorizedAccessMessage, t.unauthorizedAccessTitle);
                 });
