@@ -1,11 +1,9 @@
-window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize', 'ttLocalizer', 'ttErrorz', 'barricade', 'ui.bootstrap', 'xtForm', 'LocalStorageModule'])
-
-.config(['$routeProvider', '$locationProvider', 'xtFormConfigProvider',
+window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize', 'ttLocalizer', 'ttErrorz',
+    'barricade', 'ui.bootstrap', 'xtForm', 'LocalStorageModule'
+]).config(['$routeProvider', '$locationProvider', 'xtFormConfigProvider',
     function ($routeProvider, $locationProvider, xtFormConfigProvider) {
-        // Don't add hashbang to the URL
         $locationProvider.html5Mode(true);
 
-        // Routes
         $routeProvider.when('/', {
             templateUrl: '/app/views/home.html',
             controller: 'DefaultCtrl',
@@ -40,9 +38,7 @@ window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize
 
         xtFormConfigProvider.setDefaultValidationStrategy('submitted');
     }
-])
-
-.run(['$rootScope', 'localizer', 'errorz', 'config', 'barricade',
+]).run(['$rootScope', 'localizer', 'errorz', 'config', 'barricade',
     function ($rootScope, localizer, errorz, config, barricade) {
         config.init({
             profile: {
@@ -76,7 +72,11 @@ window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize
             serverErrorTemplateUrl: '/app/views/error-500.html',
             exclusions: ['/app/views/form-error.html'],
             serverError: function (rejection) {
-                rejection.status === 403 && toastr.warning('You don\'t have permission to perform the requested action.');
+                rejection.status === 403 && localizer.translateAll('general', [
+                     'unauthorizedAccessMessage', 'unauthorizedAccessTitle'
+                ], function (t) {
+                    toastr.warning(t.unauthorizedAccessMessage, t.unauthorizedAccessTitle);
+                });
                 return rejection;
             }
         });
