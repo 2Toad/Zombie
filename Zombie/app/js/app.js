@@ -1,7 +1,7 @@
 window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize', 'ttLocalizer', 'ttErrorz',
     'ttBarricade', 'ui.bootstrap', 'xtForm', 'LocalStorageModule'
-]).config(['$routeProvider', '$locationProvider', 'xtFormConfigProvider',
-    function ($routeProvider, $locationProvider, xtFormConfigProvider) {
+]).config(['$routeProvider', '$locationProvider', 'localStorageServiceProvider', 'xtFormConfigProvider',
+    function ($routeProvider, $locationProvider, localStorageServiceProvider, xtFormConfigProvider) {
         $locationProvider.html5Mode(true);
 
         $routeProvider.when('/', {
@@ -36,6 +36,7 @@ window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize
             'hideMethod': 'fadeOut'
         };
 
+        localStorageServiceProvider.setPrefix('zombie');
         xtFormConfigProvider.setDefaultValidationStrategy('submitted');
     }
 ]).run(['$rootScope', 'localizer', 'errorz', 'config', 'barricade',
