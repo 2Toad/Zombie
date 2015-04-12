@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Barricade;
@@ -11,20 +12,20 @@ namespace Zombie.Services
 {
     public sealed class UserService : DbService, IUserService
     {
-        public UserService(SiteContext context) : base(context) {}
+        public UserService(SiteContext context) : base(context) { }
 
         public async Task<User> Get(string username, params Expression<Func<User, object>>[] includes)
         {
-            var query = Context.Users;
-            foreach (var expression in includes) query.Include(expression);
-            return await query.SingleOrDefaultAsync(x => x.Username == username);
+            return await includes
+                .Aggregate(Context.Users.AsQueryable(), (c, i) => c.Include(i))
+                .SingleOrDefaultAsync(x => x.Username == username);
         }
 
         public async Task<User> GetUserByAccessToken(string accessToken, params Expression<Func<User, object>>[] includes)
         {
-            var query = Context.Users;
-            foreach (var expression in includes) query.Include(expression);
-            return await query.SingleOrDefaultAsync(u => u.AccessToken == accessToken);
+            return await includes
+                .Aggregate(Context.Users.AsQueryable(), (c, i) => c.Include(i))
+                .SingleOrDefaultAsync(x => x.AccessToken == accessToken);
         }
 
         public async Task<bool> UsernameExists(string username)
@@ -45,7 +46,8 @@ namespace Zombie.Services
         public async Task<User> ChangeActivationEmail(string activationCode, string email)
         {
             var user = await Context.Users.SingleOrDefaultAsync(u => u.ActivationCode == activationCode);
-            if (user != null) {
+            if (user != null)
+            {
                 user.ActivationCode = Guid.NewGuid().ToString("N");
                 user.Email = email;
             }
@@ -63,7 +65,7 @@ namespace Zombie.Services
         {
             var user = await Context.Users.SingleOrDefaultAsync(u => u.ActivationCode == activationCode);
             if (user != null) user.ActivationCode = null;
-            return user != null;            
+            return user != null;
         }
     }
 
