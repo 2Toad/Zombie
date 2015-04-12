@@ -1,5 +1,5 @@
 window.zombie = angular.module('zombieApp', ['ngRoute', 'ngCookies', 'ngSanitize', 'ttLocalizer', 'ttErrorz',
-    'barricade', 'ui.bootstrap', 'xtForm', 'LocalStorageModule'
+    'ttBarricade', 'ui.bootstrap', 'xtForm', 'LocalStorageModule'
 ]).config(['$routeProvider', '$locationProvider', 'xtFormConfigProvider',
     function ($routeProvider, $locationProvider, xtFormConfigProvider) {
         $locationProvider.html5Mode(true);

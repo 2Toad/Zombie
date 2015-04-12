@@ -29,7 +29,7 @@ gulp.task('bower-copy', ['bower-update'], function () {
         'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
         'bower_components/angular-localizer/angular-localizer.js',
         'bower_components/angular-errorz/angular-errorz.js',
-        'bower_components/barricade-angular/barricade-angular.js',
+        'bower_components/angular-barricade/angular-barricade.js',
         'bower_components/xtform/dist/xtForm.js',
         'bower_components/angular-local-storage/dist/angular-local-storage.js'
     ])

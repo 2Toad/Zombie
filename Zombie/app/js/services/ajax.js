@@ -37,7 +37,7 @@ zombie.factory('ajax', ['$q', 'errorz', '$modal', function ($q, errorz, $modal) 
                 .error(function (data, status) {
                     // The error code is handled by Angular-Errorz
                     if (errorz.handled(status)) return;
-                    // These error codes are handled by Barricade-Angular
+                    // These error codes are handled by Angular-Barricade
                     if (_.contains([401, 403], status)) return;
 
                     if (getValidationErrors(form, data)) return;

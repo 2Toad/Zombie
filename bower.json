@@ -2,26 +2,26 @@
     "name": "zombie",
     "private": "true",
     "dependencies": {
-        "jquery": "2.1.x",
-        "lodash": "3.5.x",
-        "toastr": "2.1.x",
+        "jquery": "2.x",
+        "lodash": "3.x",
+        "toastr": "2.x",
         "ladda": "0.9.x",
-        "angular": "1.3.x",
-        "angular-route": "1.3.x",
-        "angular-cookies": "1.3.x",
-        "angular-sanitize": "1.3.x",
-        "angular-i18n":  "1.4.x",
-        "bootstrap": "3.3.x",
+        "angular": "1.x",
+        "angular-route": "1.x",
+        "angular-cookies": "1.x",
+        "angular-sanitize": "1.x",
+        "angular-i18n":  "1.x",
+        "bootstrap": "3.x",
         "angular-bootstrap": "0.12.x",
-        "font-awesome": "4.3.x",
-        "angular-localizer": "1.0.x",
-        "angular-errorz": "1.0.x",
-        "barricade-angular": "1.4.x",
-        "xtform": "2.0.x",
+        "font-awesome": "4.x",
+        "angular-localizer": "1.x",
+        "angular-errorz": "1.x",
+        "angular-barricade": "1.x",
+        "xtform": "2.x",
         "angular-local-storage":  "0.1.x"
     },
     "resolutions": {
-        "angular": "1.3.x",
-        "jquery": "2.1.x"
+        "angular": "1.x",
+        "jquery": "2.x"
     }
 }
