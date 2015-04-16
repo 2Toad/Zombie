@@ -19,7 +19,7 @@ namespace Zombie
             bundles.Add(new StyleBundle("~/bundles/css")
                 // Vendor
                 .Include("~/app/css/vendor/bootstrap.css")
-                .Include("~/app/css/vendor/font-awesome.css")
+                .Include("~/app/css/vendor/font-awesome.css", new CssRewriteUrlTransform())
                 .Include("~/app/css/vendor/toastr.css")
 
                 // Application
