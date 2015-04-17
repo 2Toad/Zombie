@@ -13,21 +13,8 @@ namespace Zombie
         public static string BearerTokenKey { get { return GetSetting<string>("Security.BearerToken.Key"); } }
         public static string AccessTokenHeader { get { return GetSetting<string>("Security.AccessToken.Header"); } }
         public static int AccessTokenCacheDuration { get { return GetSetting<int>("Security.AccessToken.CacheDuration"); } }
-
         public static string SupportEmailAddress { get { return GetSetting<string>("Email.Address.Support"); } }
-
         public static bool GenerateTestData { get { return GetSetting<bool>("TestData.Generate"); } }
-        public static string TestDataEmailMask { get { return GetSetting<string>("TestData.EmailMask"); } }
-
-        /// <summary>
-        /// Formats a test email addess.
-        /// </summary>
-        /// <param name="name">The test account name.</param>
-        /// <returns>A test email address.</returns>
-        public static string TestEmail(string name)
-        {
-            return String.Format(TestDataEmailMask, name);
-        }
 
         /// <summary>
         /// Reads a setting from the configuration file.

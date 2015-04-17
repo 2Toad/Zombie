@@ -275,7 +275,9 @@
     <Content Include="app\sass\app.scss" />
     <Content Include="app\sass\globals.scss" />
     <Content Include="app\sass\home.scss" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -288,9 +290,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="AppSettings.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Security.es.resx">
@@ -341,7 +340,9 @@
     <None Include="Web.Production.config" />
     <None Include="Web.Staging.config" />
     <None Include="Web.Test.config" />
-    <None Include="Web.CI.config" />
+    <None Include="Web.CI.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Zombie.wpp.targets" />
   </ItemGroup>
   <PropertyGroup>

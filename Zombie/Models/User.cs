@@ -33,7 +33,7 @@ namespace Zombie.Models
             var users = new[] {
                 new User {
                     Username = "Admin1",
-                    Email = Config.TestEmail("admin1"),
+                    Email = "2toad.zombie+admin1@gmail.com",
                     PasswordHash = SecurityContext.GeneratePasswordHash("Pass123!", "b331P8^Gf5BNfq!lLcS$!7b@144N9XR6"),
                     PasswordSalt = "b331P8^Gf5BNfq!lLcS$!7b@144N9XR6",
                     FirstName = "Admin", 
@@ -43,7 +43,7 @@ namespace Zombie.Models
                 },
                 new User {
                     Username = "User1",
-                    Email = Config.TestEmail("user1"),
+                    Email = "2toad.zombie+admin1@gmail.com",
                     PasswordHash = SecurityContext.GeneratePasswordHash("Pass123!", "aK2Ik5Y@LLcTo8PGf29Zx#!*!S99416s"),
                     PasswordSalt = "aK2Ik5Y@LLcTo8PGf29Zx#!*!S99416s",
                     FirstName = "User", 
