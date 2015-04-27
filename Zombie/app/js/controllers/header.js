@@ -4,10 +4,6 @@ zombie.controller('HeaderCtrl', ['$scope', '$location', '$modal', 'config', 'bar
 
         $scope.config = config;
 
-        $scope.showLogin = function () {
-            return !barricade.authorized && barricade.isAuthorized();
-        };
-
         $scope.login = function () {
             $modal.open({
                 templateUrl: '/app/views/login-dialog.html',
