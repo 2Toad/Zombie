@@ -1,3 +1,7 @@
+> # Archived Repository 🚨
+> **This project is no longer maintained and has been archived. No further issues, PRs, or updates will be made.**
+---
+
 ![Zombie Logo](http://2toad.com/areas/project/content/images/zombie-logo-small.png)
 
 Zombie is an opinionated fullstack ASP.NET solution. Built with best practices, popular frameworks, and tasty *BRAINS*, it's designed to support all your wildest dreams (or at the very least: your web development needs).
